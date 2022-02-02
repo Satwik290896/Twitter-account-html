@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" crossorigin="anonymous">
+        <style type="text/css">
+            body { 
+                background: rgb(146, 183, 231) !important;
+            } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+         </style>
+        <style>
+            .container {
+                /*background: rgb(146, 183, 231);*/
+                width: 100%;
+            }
+            .no-gutters-1 {
+                margin-left: 0%;
+                margin-right: 0%
+            }
+            .no-gutters-11 {
+                display: inline-block;
+                margin-left: 1%;
+                margin-left: 0%;
+                padding-right: 0%;
+                padding-left: 0%;
+                padding-top: 0%;
+            }
+            .no-gutters-111 {
+                margin-left: 0%;
+                margin-right: 0%;
+                margin-top: -8%;
+                margin-bottom: -7%;
+            }
+            .no-gutters-1111 {
+                margin-left: 0%;
+                margin-right: 0%;
+                margin-bottom: -7%;
+            }
+            .no-gutters-2 {
+                margin-right: 0;
+                margin-left: 0;
+                padding-right: 1%;
+                padding-left: 1%;
+                padding-top: 1%;
+            }
+            .no-gutters-22 {
+                margin-right: 0;
+                margin-left: 0%;
+                padding-right: 3%;
+                padding-left: 3%;
+                padding-top: 1%;
+            }
+            .no-gutters-222 {
+                margin-right: 0;
+                margin-left: 0;
+                padding-right: 1%;
+                padding-left: 0%;
+                padding-top: 1%;
+                padding-bottom: 1%
+            }
+            .no-gutters-23 {
+                margin-right: 0;
+                margin-left: 0;
+                padding-right: 1%;
+                padding-left: 3%;
+                padding-top: 1%;
+            }
+            .no-gutters-233 {
+                margin-right: 0;
+                margin-left: 0;
+                padding-right: 1%;
+                padding-left: 1%;
+                padding-top: 0%;
+            }
+            .no-gutters-3 {
+                margin-right: 0;
+                margin-left: 0;
+                padding-right: 0%;
+                padding-left: 0;
+                padding-top: 0.5%;
+            }
+            .no-gutters-33 {
+                margin-right: 0;
+                margin-left: 0;
+                padding-right: 0%;
+                padding-left: 0;
+                padding-top: 4%;
+            }
+            .no-gutters-4 {
+                margin-right: 5%;
+                margin-left: 0%;
+                padding-right: 0%;
+                padding-left: 0;
+                padding-top: 0%;
+            }
+            .no-gutters-5 {
+                margin-right: 0%;
+                margin-left: 0%;
+                padding-right: 5%;
+                padding-left: 12%;
+                padding-top: 0%;
+            }
+            .gutter-special {
+                margin-right: -3%;
+            }
+            .gutter-special-2 {
+                margin-left: -3%;
+            }
+            .block1  {
+                /*height: 40px;*/
+                background-color: rgb(146, 183, 231);
+                text-align: center;
+                font-size: 100%;
+                padding: 0.5%
+            }
+            .block2  {
+                /*height: 30px;*/
+                background-color: rgb(167, 164, 164);
+            }
+            .block3 {
+                /*height: 30px;*/
+                background-color: white;
+                padding: 0.5
+            }
+            .block4 {
+                /*height: 25px;*/
+                background-color: white;
+                padding-left: 3%;
+                margin-top:-5%;
+            }
+            .block5 {
+                /*height: 50px;*/
+                text-align: center;
+                padding: 2%
+            }
+            .LikeMe {
+                /*border: 50px outset rgb(255, 255, 255);*/
+                display: inline-block;
+                border: 0.2px solid rgb(160, 159, 159);
+                background-color: rgb(207, 204, 204);
+                /*border-radius: 50px;*/
+                padding: 1px 2px 0px 2px;
+                font-size: 50%;
+                margin-top:-3%;
+            }
+            .text1 {
+                font-size: 50%;
+                color: gray;
+            }
+            .text11 {
+                font-size: 40%;
+                font-weight: bold;
+                color: rgb(53, 102, 238);
+            }
+            .text111 {
+                font-size: 30%;
+                color: gray;
+                margin-bottom: 3%;
+            }
+            .text2 {
+                margin-left:20px;
+                padding-left:9%;
+                font-size: 50%;
+                font-weight: bold;
+            }
+            .text222 {
+                margin-left:5px;
+                font-size: 50%;
+                font-weight: bold;
+                padding-top:3%;
+                padding-bottom: 3%;
+            }
+            .text22 {
+                font-size: 50%;
+                font-weight: bold;
+                padding-top: 3%;
+                padding-bottom: 3%;
+            }
+            .text3 {
+                font-weight: bold;
+                font-size: 50%;
+            }
+            .text4 {
+                font-size: 50%;
+            }
+            .text44 {
+                font-size: 50%;
+                margin-bottom:-8%;
+            }
+            .img1 {
+                max-width: 100%;
+            }
+            .fit-content {
+                width: fit-content; 
+                /* To adjust the height as well */ 
+                height: fit-content;
+            }
+            .inblock1{
+                display: inline-block;
+                vertical-align:top;
+                margin-left: 5%;
+                margin-bottom:-10%
+            }
+            .inblock2{
+                display: inline-block;
+                margin-bottom:-10%;
+            }
+            .img2 {
+                width: 45px;
+                height: 35px;
+            }
+            .line{
+                display: block;
+    width: 100%;
+    height: 47px;
+    border-bottom: 1px solid rgb(243, 241, 241);
+    margin-top: -25%;
+    margin-bottom:4%
+    }
+    .line2{
+                display: block;
+    width: 100%;
+    height: 47px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    margin-top: -25%;
+    margin-bottom:4%
+    }
+    .line3{
+                display: block;
+    width: 100%;
+    height: 47px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    margin-top: -27%;
+    margin-bottom:4%
+    }
+        </style>
+    </head>
+
+
+<body>
+    <div class="container">
+            <div class="row">
+                <div class="col-md-3 gutter-special">
+                    <div>Columbia University</div>
+                    <div class="text1">@Columbia</div>
+                    <div class="LikeMe">Tweet to Columbia</div>
+                    <div class="row no-gutters-1">
+                        <div class="col-md-4 no-gutters-2">
+                            <img class="img1" src="http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg"/>
+                        </div>
+                        <div class="col-md-4 no-gutters-2">
+                            <img class="img1" src="http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg"/>
+                        </div>
+                        <div class="col-md-4 no-gutters-2">
+                            <img class="img1" src="http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg"/>
+                        </div>
+                        <div class="col-md-4 no-gutters-2">
+                            <img class="img1" src="http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg"/>
+                        </div>
+                        <div class="col-md-4 no-gutters-2">
+                            <img class="img1" src="http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg"/>
+                        </div>
+                        <div class="col-md-4 no-gutters-2">
+                            <img class="img1" src="http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="block3">
+                        <div class="row">
+                            <div class="col-md-1.5">
+                                <span class="text2">Tweets</span>
+                            </div>
+                            <div class="col-md-1.5">
+                                <span class="text2">Media</span>
+                            </div>
+                            <div class="col-md-1.5">
+                                <span class="text2">Other</span>
+                            </div>
+                            <div class="col-md-1.5">
+                                <span class="text2">Other2</span>
+                            </div>        
+                            <div class="col-md-6">
+                            </div>           
+                        </div>
+                    </div>
+                    <div class="no-gutters-3"></div>
+                    <div class="block3">
+                        <div>
+                            <div class="row no-gutters-1">
+                            <div class="col-md-2 no-gutters-22">
+                                <img class="img1" src="http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg"/>
+                            </div>
+                            <div class="col-md-10 no-gutters-222">
+                                <div class="text3">Columbia University</div>
+                                <div class="text4">Groundbreaking. Beautiful. Monumental. More Text. Read this. Lots to read. Lorem Ispum. Get it to break the line. Must use 3 lines. What else can I say? #threelines</div>
+                                <img class="img1" src="http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg"/>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="no-gutters-3"></div>
+                    <div class="block3">
+                        <div>
+                            <div class="row no-gutters-1">
+                            <div class="col-md-2 no-gutters-22">
+                                <img class="img1" src="http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg"/>
+                            </div>
+                            <div class="col-md-10 no-gutters-222">
+                                <div class="text3">Columbia University</div>
+                                <div class="text4">Groundbreaking. Beautiful. Monumental. More Text. Read this. Lots to read. Lorem Ispum. Get it to break the line. Must use 3 lines. What else can I say? #threelines</div>
+                                <img class="img1" src="http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg"/>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 gutter-special-2">
+                    <div class="block3">
+                        <div class="text222">Who to follow</div>
+                        <div class="inblock1">
+                            <img class="img1 img2" src="http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg"/>
+                        </div>
+                        <div class="inblock2">
+                            <div class="text44">Columbia</div>
+                            <div class="LikeMe">Follow</div>
+                        </div>
+                        <!--<div class="row no-gutters-1111">
+                            <div class="col-md-4 no-gutters-23">
+                                <img class="img1" src="http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg"/>
+                            </div>
+                            <div class="col-md-4 no-gutters-233">
+                                <div class="text4">Columbia</div>
+                                <div class="LikeMe">Follow</div>
+                            </div>
+                            <div class="col-md-4">
+                            </div>
+                        </div>-->
+                        <div class="line"></div>
+                        <div>
+                        <div class="inblock1">
+                            <img class="img1 img2" src="http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg"/>
+                        </div>
+                        <div class="inblock2">
+                            <div class="text44">Columbia</div>
+                            <div class="LikeMe">Follow</div>
+                        </div>
+                    </div>
+                        <!--<div class="row no-gutters-1111">
+                            <div class="col-md-4 no-gutters-23">
+                                <img class="img1" src="http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg"/>
+                            </div>
+                            <div class="col-md-4 no-gutters-233">
+                                <div class="text4">Columbia</div>
+                                <div class="LikeMe">Follow</div>
+                            </div>
+                            <div class="col-md-4">
+                            </div>
+                        </div>-->
+                        <div class="line"></div>
+                        <div class="inblock1">
+                            <img class="img1 img2" src="http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg"/>
+                        </div>
+                        <div class="inblock2">
+                            <div class="text44">Columbia</div>
+                            <div class="LikeMe">Follow</div>
+                        </div>
+                        <!--<div class="row no-gutters-1111">
+                            <div class="col-md-4 no-gutters-23">
+                                <img class="img1" src="http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg"/>
+                            </div>
+                            <div class="col-md-4 no-gutters-233">
+                                <div class="text4">Columbia</div>
+                                <div class="LikeMe">Follow</div>
+                            </div>
+                            <div class="col-md-4">
+                            </div>
+                        </div>-->
+                        <div class="line2"></div>
+                    </div>
+                    <div class="no-gutters-33"></div>
+                    <div class="block4">
+                        <div class="text22">Trends for you!</div>
+                        <div class="text11">#COMS4170</div>
+                        <div class="text111">45 million tweets</div>
+                        <div class="text11">#COMS6889-08</div>
+                        <div class="text111">35 million tweets</div>
+                        <div class="line3"></div>
+                    </div>
+                </div>          
+            </div>
+    </div>
+</body>
+
+</html>
